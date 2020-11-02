@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.whu.mapper.IBookMapper">
+    <insert id="add" parameterType="com.whu.pojo.Book">
+       insert into book(bookname,category_id,author,press,price,description,img)
+       values(#{bookname},#{category_id},#{author},#{press},#{price},#{description},#{img})
+    </insert>
+    <select id="getById" parameterType="int" resultType="com.whu.pojo.Book">
+        select * from book where id=#{id}
+    </select>
+    <update id="update" parameterType="com.whu.pojo.Book">
+        update book set bookname=#{bookname},category_id=#{category_id},author=#{author},press=#{press},
+        price=#{price},description=#{description},img=#{img} where  id=#{id}
+    </update>
+    <delete id="delete" parameterType="int">
+        delete from book where  id=#{id}
+    </delete>
+    <resultMap id="bookBean" type="com.whu.pojo.Book">
+        <id column="id" property="id"></id>
+        <result column="bookname" property="bookname"></result>
+        <result column="category_id" property="category_id"></result>
+        <result column="author" property="author"></result>
+        <result column="press" property="press"></result>
+        <result column="price" property="price"></result>
+        <result column="description" property="description"></result>
+        <result column="img" property="img"></result>
+    </resultMap>
+    <select id="getAllBook" resultMap="bookBean">
+        select  * from book
+    </select>
+</mapper>

@@ -1,0 +1,5 @@
+[
+  { "book_id": "4", "bookName": "一体", "price": 25, "quantity": 3, "img": "https://img3.doubanio.com/view/subject/s/public/s29053580.jpg" },
+  { "book_id": "2", "bookName": "二体", "price": 20.4, "quantity": 2, "img": "https://img3.doubanio.com/view/subject/s/public/s29053580.jpg" },
+  { "book_id": "3", "bookName": "三体", "price": 15, "quantity": 1, "img": "https://img3.doubanio.com/view/subject/s/public/s29053580.jpg" }
+]

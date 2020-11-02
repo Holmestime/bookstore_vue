@@ -1,0 +1,30 @@
+CREATE TABLE User(id int not null auto_increment,
+		username varchar(15) not null,
+		password varchar(20) not null, 
+		primary key(id));
+
+CREATE TABLE Book(id int not null auto_increment,
+		bookname varchar(50) not null,
+		category_id int not null,
+		author varchar(20),
+		press varchar(25),
+		price decimal(6,2),
+		description varchar(511),
+		img varchar(100),
+		primary key(id));
+
+CREATE TABLE Category(id int not null,name varchar(10),primary key(id));
+insert into Category values(0,'小说');
+insert into Category values(1,'编程');
+insert into Category values(2,'美食');
+insert into Category values(3,'商业');
+insert into Category values(4,'建筑');
+
+CREATE TABLE Cart(user_id  int not null,
+		book_id int not null,
+		quantity int not null,
+		price decimal(6,2) not null,
+                                primary key(user_id,book_id));
+
+
+

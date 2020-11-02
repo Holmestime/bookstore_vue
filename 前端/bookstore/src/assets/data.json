@@ -1,0 +1,10 @@
+{
+	"bookname":"eee",
+                "id": 1,
+                "author": "eee",
+                "press": "eee",
+                "category_id":1,
+                "price": 111,
+                "description":"eee",
+                "img": "https://img3.doubanio.com/view/subject/s/public/s1727290.jpg"
+}
